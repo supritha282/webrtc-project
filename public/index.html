@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebRTC Video Chat</title>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/peerjs/1.3.1/peerjs.min.js"></script>
+    <script src="script.js" defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-white">
+    <div class="flex flex-col items-center justify-center min-h-screen">
+        <h1 class="text-3xl font-bold mb-4">WebRTC Video Chat</h1>
+        <div id="video-container" class="grid grid-cols-2 gap-4 p-4 bg-gray-800 rounded-lg">
+            <video id="local-video" class="rounded-lg border border-gray-600" autoplay playsinline muted></video>
+        </div>
+        <div class="mt-4 space-x-4">
+            <button id="mute-btn" class="bg-blue-500 px-4 py-2 rounded-lg">Mute</button>
+            <button id="video-btn" class="bg-green-500 px-4 py-2 rounded-lg">Video Off</button>
+            <button id="leave-btn" class="bg-red-500 px-4 py-2 rounded-lg">Leave</button>
+        </div>
+    </div>
+</body>
+</html>
